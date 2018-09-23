@@ -1,4 +1,5 @@
 import { getRandomInt } from './lib/util';
+import { GRID_X_LENGTH, GRID_Y_LENGTH } from './util/constants';
 import ScoreBoard from './lib/ScoreBoard';
 import Snake from './lib/Snake';
 import Square from './lib/Square';
