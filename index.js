@@ -1,11 +1,9 @@
 import { getRandomInt } from './lib/util';
-import { GRID_X_LENGTH, GRID_Y_LENGTH } from './util/constants';
+import { GRID_X_LENGTH, GRID_Y_LENGTH } from './lib/constants';
 import ScoreBoard from './lib/ScoreBoard';
 import Snake from './lib/Snake';
 import Square from './lib/Square';
-
-const GRID_X_LENGTH = 20;
-const GRID_Y_LENGTH = 20;
+import Apple from './lib/Apple';
 
 const keys = {
     w: { isPressed: false },
@@ -39,7 +37,7 @@ window.addEventListener("keyup", e => {
 });
 
 const c = document.getElementById("myCanvas");
-const ctx = c.getContext("2d");
+window.ctx = c.getContext("2d");
 
 const grid = Array(GRID_X_LENGTH)
     .fill(true)
